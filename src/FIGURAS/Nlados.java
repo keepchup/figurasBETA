@@ -18,13 +18,16 @@ public class Nlados extends Otras_Figuras{
         this.apotema = apotema;
     }
 
-    private static double calcularApotema (double lado) {
-        return lado / (2 * Math.tan(Math.toRadians(180.0 / 5)));
+    @Override
+    public int getLados() {
+        return super.getLados();
+    }
+
+    private static double calcularApotema (int lados) {
+        return lados / (2 * Math.tan(Math.toRadians(180.0 / 5)));
     }
     public double calcularAreaNlados(){
         double area = (calcularPerimetro() * calcularApotema(getLados()))/2;
         return (float) area;
     }
-
-
 }
