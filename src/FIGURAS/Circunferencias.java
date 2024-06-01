@@ -19,6 +19,13 @@ public class Circunferencias extends Otras_Figuras{
     }
 
     public double calcularAreaCiruclo() {
-        return Math.PI * radio * radio;
+        area= Math.PI * radio * radio;
+        perimetro = 2 * Math.PI * radio;
+        return area;
+    }
+
+    public void imprimirDatosCirculo(){
+        System.out.println("Circulo: " + getArea());
+        System.out.println("Perimetro: " + getPerimetro());
     }
 }

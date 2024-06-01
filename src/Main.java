@@ -1,5 +1,6 @@
 import FIGURAS.Figuras;
 import FIGURAS.Cuadrilateros;
+import FIGURAS.Circunferencias;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -20,7 +21,11 @@ public class Main {
         c2.imprimirDatosRectangulo();
 
 
+        Circunferencias ciculo1 = new Circunferencias();
 
+        ciculo1.setRadio(3);
+        ciculo1.calcularAreaCiruclo();
+        ciculo1.imprimirDatosCirculo();
     }
 
 }
