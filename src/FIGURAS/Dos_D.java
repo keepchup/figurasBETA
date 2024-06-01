@@ -29,12 +29,4 @@ public class Dos_D extends Figuras {
         this.perimetro = perimetro;
     }
 
-    public double calcularArea() {
-        return area * perimetro;
-    }
-
-    public double calcularPerimetro() {
-        System.out.println("Hola");
-        return perimetro;
-    }
 }

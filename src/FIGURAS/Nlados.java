@@ -23,11 +23,12 @@ public class Nlados extends Otras_Figuras{
         return super.getLados();
     }
 
-    private static double calcularApotema (int lados) {
+    private static double calcularApotema(int lados) {
         return lados / (2 * Math.tan(Math.toRadians(180.0 / 5)));
     }
-    public double calcularAreaNlados(){
-        double area = (calcularPerimetro() * calcularApotema(getLados()))/2;
+
+    public double calcularAreaNlados() {
+        double area = (calcularPerimetro() * calcularApotema(getLados())) / 2;
         return (float) area;
     }
 }
