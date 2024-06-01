@@ -27,8 +27,12 @@ public class Nlados extends Otras_Figuras{
         return lados / (2 * Math.tan(Math.toRadians(180.0 / 5)));
     }
 
+    public double calcularPerimetroNlados() {
+        return calcularApotema(getLados());
+    }
+
     public double calcularAreaNlados() {
-        double area = (calcularPerimetro() * calcularApotema(getLados())) / 2;
+        double area = (calcularPerimetroNlados() * calcularApotema(getLados())) / 2;
         return (float) area;
     }
 }
