@@ -35,5 +35,6 @@ public class Dos_D extends Figuras {
 
     public double calcularPerimetro() {
         System.out.println("Hola");
+        return perimetro;
     }
 }
