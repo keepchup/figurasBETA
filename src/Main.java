@@ -65,12 +65,25 @@ public class Main {
         heptagono1.calcularDatosHeptagono();
         heptagono1.imprimirDatosHeptagono();
 
+        //OCTAGONO
         System.out.println("\n");
-
         Nlados octagono1 = new Nlados();
         octagono1.setTamlado(8);
         octagono1.calcularDatosOctagono();
         octagono1.imprimirDatosOctagono();
-    }
 
+        //ENDECAGONO
+        System.out.println("\n");
+        Nlados endecagono1 = new Nlados();
+        endecagono1.setTamlado(4);
+        endecagono1.calcularDatosendecagono();
+        endecagono1.imprimirDatosEndecagono();
+
+        //DODECAGONO
+        System.out.println("\n");
+        Nlados dodecagono1= new Nlados();
+        dodecagono1.setTamlado(3);
+        dodecagono1.calcularDatosdodecagono();
+        dodecagono1.imprimirDatosDodecagono();
+    }
 }

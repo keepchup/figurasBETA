@@ -30,7 +30,7 @@ public class Nlados extends Otras_Figuras{
 
 
     public double calculaDatosPentagono() {
-        apotema = tamlado / (2.0 * Math.tan(Math.toRadians(36.0);
+        apotema = tamlado / (2.0 * Math.tan(Math.toRadians(36.0)));
         perimetro = tamlado * 5;
         area = (perimetro * apotema)/2;
         return area;
@@ -87,9 +87,28 @@ public class Nlados extends Otras_Figuras{
         return area;
     }
     public double calcularDatosendecagono() {
+        apotema = ((tamlado/2)*(Math.sin((9*Math.PI)/22)/Math.sin(Math.PI/11)));
+        perimetro = tamlado * 11;
+        area = ((11*apotema*tamlado)/2);
         return area;
     }
+    public void imprimirDatosEndecagono(){
+        System.out.println("Apotema: "+ getApotema());
+        System.out.println("Tamlado: "+ getTamlado());
+        System.out.println("El area del endecagono es: " + getArea());
+        System.out.println("El perimetro del endecagono es: " + getPerimetro());
+    }
+
     public double calcularDatosdodecagono() {
+        apotema = (tamlado*((2+Math.sqrt(3))/2));
+        perimetro = tamlado * 12;
+        area = 6*apotema*tamlado;
         return area;
+    }
+    public void imprimirDatosDodecagono(){
+        System.out.println("Apotema: "+ getApotema());
+        System.out.println("Tamlado: "+ getTamlado());
+        System.out.println("El area del dodecagono es: " + getArea());
+        System.out.println("El perimetro del dodecagono es: " + getPerimetro());
     }
 }
