@@ -27,8 +27,8 @@ public class Triangulos extends Dos_D {
     }
 
     public double calcularDatosTrianguloEquilatero () {
-        area = (base * altura) /2;
-        perimetro = (altura * 3);
+        area = (base * base) /2;
+        perimetro = (base * 3);
         return area;
     }
 
