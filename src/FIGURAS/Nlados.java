@@ -42,8 +42,24 @@ public class Nlados extends Otras_Figuras{
         area = ((perimetro * apotema)/2);
         return area;
     }
+    public void imprimirDatosHeptagono(){
+        System.out.println("Apotema: "+ getApotema());
+        System.out.println("Tamlado: "+ getTamlado());
+        System.out.println("El area del heptagono es: " + getArea());
+        System.out.println("El perimetro del heptagono es: " + getPerimetro());
+    }
+
     public double calcularDatosOctagono() {
+        apotema = ((tamlado*2.41421)/2);
+        perimetro = tamlado * 8;
+        area = 4*apotema*tamlado;
         return area;
+    }
+    public void imprimirDatosOctagono(){
+        System.out.println("Apotema: "+ getApotema());
+        System.out.println("Tamlado: "+ getTamlado());
+        System.out.println("El area del octagono es: " + getArea());
+        System.out.println("El perimetro del octagono es: " + getPerimetro());
     }
     public double calcularDatosnonagono() {
         return area;

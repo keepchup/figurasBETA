@@ -2,10 +2,14 @@ import FIGURAS.Figuras;
 import FIGURAS.Cuadrilateros;
 import FIGURAS.Circunferencias;
 import FIGURAS.Triangulos;
+import FIGURAS.Nlados;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
+
+        //CUADRILATEROS
         Cuadrilateros c1 = new Cuadrilateros();
 
         Cuadrilateros c2 = new Cuadrilateros();
@@ -15,6 +19,8 @@ public class Main {
         c1.calcularDatosCuadrado();
         c1.imprimirdATOSCuadrado();
 
+        System.out.println("\n");
+
         c2.setLados(4);
         c2.setBase(3);
         c2.setAltura(5);
@@ -22,12 +28,17 @@ public class Main {
         c2.imprimirDatosRectangulo();
 
 
+        //CIRCUNFERENCIAS
+        System.out.println("\n");
         Circunferencias ciculo1 = new Circunferencias();
 
         ciculo1.setRadio(3);
         ciculo1.calcularAreaCiruclo();
         ciculo1.imprimirDatosCirculo();
 
+
+        //TRIANGULOS
+        System.out.println("\n");
         Triangulos t1 = new Triangulos();
 
         t1.setLados(3);
@@ -37,12 +48,29 @@ public class Main {
         t1.calcularDatosTriangulosIsoceles();
         t1.imprimirDatosTrianguloIsoceles();
 
+        System.out.println("\n");
+
         Triangulos t2 = new Triangulos();
         t2.setLados(3);
         t2.setBase(3);
         t2.setAltura(3);
         t2.calcularDatosTrianguloEquilatero();
         t2.imprimirDatosTrianguloEquilatero();
+
+
+        //HEPTAGONO
+        System.out.println("\n");
+        Nlados heptagono1 = new Nlados();
+        heptagono1.setTamlado(5);
+        heptagono1.calcularDatosHeptagono();
+        heptagono1.imprimirDatosHeptagono();
+
+        System.out.println("\n");
+
+        Nlados octagono1 = new Nlados();
+        octagono1.setTamlado(8);
+        octagono1.calcularDatosOctagono();
+        octagono1.imprimirDatosOctagono();
     }
 
 }
