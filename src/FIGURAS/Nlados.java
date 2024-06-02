@@ -2,12 +2,14 @@ package FIGURAS;
 
 public class Nlados extends Otras_Figuras{
     double apotema;
+    double tamlado;
 
     public Nlados() {
     }
 
-    public Nlados(double apotema) {
+    public Nlados(double apotema, double tamlado) {
         this.apotema = apotema;
+        this.tamlado = tamlado;
     }
 
     public double getApotema() {
@@ -18,21 +20,41 @@ public class Nlados extends Otras_Figuras{
         this.apotema = apotema;
     }
 
-    @Override
-    public int getLados() {
-        return super.getLados();
+    public double getTamlado() {
+        return tamlado;
     }
 
-    private static double calcularApotema(int lados) {
-        return lados / (2 * Math.tan(Math.toRadians(180.0 / 5)));
+    public void setTamlado(double tamlado) {
+        this.tamlado = tamlado;
     }
 
-    public double calcularPerimetroNlados() {
-        return calcularApotema(getLados());
-    }
 
-    public double calcularAreaNlados() {
-        double area = (calcularPerimetroNlados() * calcularApotema(getLados())) / 2;
-        return (float) area;
+
+    public double calculaDatosPentagono() {
+        return area;
+    }
+    public double calcularDatosHexagono(){
+        return area;
+    }
+    public double calcularDatosHeptagono() {
+        apotema = tamlado*1.0382060698;
+        perimetro = tamlado * 7;
+        area = ((perimetro * apotema)/2);
+        return area;
+    }
+    public double calcularDatosOctagono() {
+        return area;
+    }
+    public double calcularDatosnonagono() {
+        return area;
+    }
+    public double calcularDatosdecagono() {
+        return area;
+    }
+    public double calcularDatosendecagono() {
+        return area;
+    }
+    public double calcularDatosdodecagono() {
+        return area;
     }
 }
