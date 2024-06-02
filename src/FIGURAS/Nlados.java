@@ -81,10 +81,29 @@ public class Nlados extends Otras_Figuras{
         System.out.println("El perimetro del octagono es: " + getPerimetro());
     }
     public double calcularDatosnonagono() {
+        apotema = (tamlado/2) * (Math.sin(Math.toRadians(70)) *  Math.sin(Math.toRadians(20)));
+        perimetro = tamlado * 9;
+        area = (9 * apotema * tamlado)/2;
         return area;
     }
+    public void imprimirDatosNonagono() {
+        System.out.println("Apotema: " + getApotema());
+        System.out.println("Tamlado: " + getTamlado());
+        System.out.println("El area del nonagono es: " + getArea());
+        System.out.println("El perimetro del nonagono es: " + getPerimetro());
+    }
     public double calcularDatosdecagono() {
+        apotema = tamlado / (2 * Math.tan(Math.PI / 10));
+        perimetro = tamlado * 10;
+        area = (perimetro * apotema)/2;
         return area;
+    }
+
+    public void imprimirDatosDecagono() {
+        System.out.println("Apotema: " + getApotema());
+        System.out.println("Tamlado: " + getTamlado());
+        System.out.println("El area del decagono es: " + getArea());
+        System.out.println("El perimetro del decagono es: " + getPerimetro());
     }
     public double calcularDatosendecagono() {
         apotema = ((tamlado/2)*(Math.sin((9*Math.PI)/22)/Math.sin(Math.PI/11)));
