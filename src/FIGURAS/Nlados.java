@@ -31,9 +31,15 @@ public class Nlados extends Otras_Figuras{
 
 
     public double calculaDatosPentagono() {
+        apotema = tamlado / (2.0 * Math.tan(Math.toRadians(36.0);
+        perimetro = tamlado * 5;
+        area = (perimetro * apotema)/2;
         return area;
     }
     public double calcularDatosHexagono(){
+        apotema = (tamlado * Math.sqrt(3))/ 2;
+        perimetro = tamlado * 6;
+        area = (perimetro * area)/2;
         return area;
     }
     public double calcularDatosHeptagono() {
