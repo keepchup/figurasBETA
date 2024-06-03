@@ -117,9 +117,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Cuadrilateros c1 = new Cuadrilateros();
         int op;
+        double lado, base, altura;
         do {
-            System.out.println("Seleccione que quiere calcular\n");
-            System.out.println("\t1. Area\n\t2.Perimetro\n");
+            System.out.println("Seleccione la figura a calcular\n");
+            System.out.println("\t1. Cuadrado\n\t2. Rectangulo\n\t3. Cuadrilatero Irregular\n\t4. Regresar\n");
             System.out.print("Ingrese el numero de la opcion: ");
             while (!sc.hasNextInt()) {
                 System.out.println("Debe ingresar un número entero.");
@@ -128,18 +129,42 @@ public class Main {
             op = sc.nextInt();
             switch (op){
                 case 1:
-                    System.out.println("\tArea");
+                    System.out.println("\n\tCuadrado");
                     System.out.println("Ingrese la logitud de un lado del cuadrado");
-                    double lado = sc.nextDouble();
-                    c1.setBase(lado);
+                    c1.setBase(sc.nextDouble());
+
                     c1.calcularDatosCuadrado();
                     c1.imprimirdATOSCuadrado();
                     break;
+
                 case 2:
-                    System.out.println("\tPerimetro");
+                    System.out.println("\n\tRectangulo");
+                    System.out.println("Ingrese la base del rectangulo");
+                    c1.setBase(sc.nextDouble());
+                    System.out.println("Ingrese la altura del rectangulo");
+                    c1.setAltura(sc.nextDouble());
+
+                    c1.calcularDatosRectangulo();
+                    c1.imprimirdATOSCuadrado();
                     break;
+
                 case 3:
-                    System.out.println("Regresando al menú...\n");
+                    System.out.println("\n\tCuadrilatero Irregular");
+                    System.out.println("Ingrese la longitud del lado 1: ");
+                    c1.setLado1(sc.nextDouble());
+                    System.out.println("Ingrese la longitud del lado 2: ");
+                    c1.setLado2(sc.nextDouble());
+                    System.out.println("Ingrese la longitud del lado 3: ");
+                    c1.setLado3(sc.nextDouble());
+                    System.out.println("Ingrese la longitud del lado 4: ");
+                    c1.setLado4(sc.nextDouble());
+                    System.out.println("Ingrese la medida del primer angulo: ");
+
+                    c1.calcularDatosRectangulo();
+                    c1.imprimirdATOSCuadrado();
+                    break;
+                case 4:
+                    System.out.println("Regresando al menu principal");
                     break;
                 default:
                     System.out.println("Ingrese un numero valido (1, 2 o 3).");
