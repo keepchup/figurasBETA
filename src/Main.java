@@ -86,7 +86,7 @@ public class Main {
         int op;
         do {
             System.out.println("\nSeleccione la figura de la cual quieras calcular\n");
-            System.out.println("\t1. Esferas\n\t2. Cubos\n\t3. Piramides\n\t4. Prismas\n\t5. Regresar\n");
+            System.out.println("\t1. Esferas\n\t2. Cilindros\n\t3. Cubos\n\t4. Piramides\n\t5. Prismas\n\t6. Regresar\n");
             System.out.print("Ingrese el numero de la opcion: ");
             while (!sc.hasNextInt()) {
                 System.out.println("Debe ingresar un número entero.");
@@ -99,22 +99,27 @@ public class Main {
                     System.out.println("Esferas");
                     esferas();
                     break;
+
                 case 2:
-                    System.out.println("Cubos");
-                    cubos();
-                    break;
-                case 3:
-                    System.out.println("Piramides");
-                    Piramides();
-                    break;
-                case 4:
-                    System.out.println("Prismas");
-                    Prisma();
-                    break;
-                case 5:
                     System.out.println("Cilindro");
                     cilindros();
                     break;
+
+                case 3:
+                    System.out.println("Cubos");
+                    cubos();
+                    break;
+
+                case 4:
+                    System.out.println("Piramides");
+                    Piramides();
+                    break;
+
+                case 5:
+                    System.out.println("Prismas");
+                    Prisma();
+                    break;
+
                 case 6:
                     System.out.println("Regresando al menú principal...\n");
                     return;
@@ -124,98 +129,7 @@ public class Main {
         } while (op != 5);
     }
 
-    public static void esferas(){
-        Scanner sc = new Scanner(System.in);
-        Figuras_2D esfera = new Figuras_2D();
-        System.out.println("Ingrese el radio de la esfera");
-        esfera.setRadio(sc.nextDouble());
-
-        esfera.calcularDatosEsfera();
-        esfera.imprimirDatosEsfera();
-    }
-
-    public static void cilindros() {
-        Scanner sc = new Scanner(System.in);
-        Figuras_2D cilindro = new Figuras_2D();
-        System.out.println("Ingrese el radio de la cilindro");
-        cilindro.setRadio(sc.nextDouble());
-        System.out.println("Ingrese la altura del cilindro");
-        cilindro.setAltura(sc.nextDouble());
-
-        cilindro.calcularDatosCilindro();
-        cilindro.imprimirDatosCilindro();
-    }
-
-    public static void cubos(){
-        Scanner sc = new Scanner(System.in);
-        Figuras_2D cubo = new Figuras_2D();
-        System.out.println("Ingrese el area de la cara de la cubo");
-        cubo.setArea(sc.nextDouble());
-
-        cubo.calcularDatosCubo();
-        cubo.imprimirDatosCubo();
-    }
-
-    public static void Nlados(){
-        Scanner sc = new Scanner(System.in);
-        Nlados nlados1 = new Nlados();
-        int numlados;
-
-        System.out.println("\nIngrese el numero de lados de su figura\n");
-        numlados = sc.nextInt();
-        while (numlados < 5 || numlados > 12){
-            System.out.println("El numero de lados debe estar entre 5 y 12\nIngrese el dato de nuevo");
-            numlados = sc.nextInt();
-        }
-        if (numlados == 5) {
-            System.out.println("Ingrese la medida del lado\n");
-            nlados1.setTamlado(sc.nextDouble());
-            nlados1.calculaDatosPentagono();
-            nlados1.imprimirDatosPentagono();
-
-        } else if (numlados == 6) {
-            System.out.println("Ingrese la medida del lado\n");
-            nlados1.setTamlado(sc.nextDouble());
-            nlados1.calcularDatosHexagono();
-            nlados1.imprimirDatosHexagono();
-
-        } else if (numlados == 7) {
-            System.out.println("Ingrese la medida del lado\n");
-            nlados1.setTamlado(sc.nextDouble());
-            nlados1.calcularDatosHeptagono();
-            nlados1.imprimirDatosHeptagono();
-
-        } else if (numlados == 8) {
-            System.out.println("Ingrese la medida del lado\n");
-            nlados1.setTamlado(sc.nextDouble());
-            nlados1.calcularDatosOctagono();
-            nlados1.imprimirDatosOctagono();
-
-        } else if (numlados == 9) {
-            System.out.println("Ingrese la medida del lado\n");
-            nlados1.setTamlado(sc.nextDouble());
-            nlados1.calcularDatosnonagono();
-            nlados1.imprimirDatosNonagono();
-
-        } else if (numlados == 10) {
-            System.out.println("Ingrese la medida del lado\n");
-            nlados1.setTamlado(sc.nextDouble());
-            nlados1.calcularDatosdecagono();
-            nlados1.imprimirDatosDecagono();
-
-        } else if (numlados == 11) {
-            System.out.println("Ingrese la medida del lado\n");
-            nlados1.setTamlado(sc.nextDouble());
-            nlados1.calcularDatosendecagono();
-            nlados1.imprimirDatosEndecagono();
-
-        } else if (numlados == 12) {
-            System.out.println("Ingrese la medida del lado\n");
-            nlados1.setTamlado(sc.nextDouble());
-            nlados1.calcularDatosdodecagono();
-            nlados1.imprimirDatosDodecagono();
-        }
-    }
+    //FIGURAS EN 2D
 
     public static void Circunferencias () {
         Scanner sc = new Scanner(System.in);
@@ -378,6 +292,101 @@ public class Main {
         } while (op!=3);
     }
 
+    public static void Nlados(){
+        Scanner sc = new Scanner(System.in);
+        Nlados nlados1 = new Nlados();
+        int numlados;
+
+        System.out.println("\nIngrese el numero de lados de su figura\n");
+        numlados = sc.nextInt();
+        while (numlados < 5 || numlados > 12){
+            System.out.println("El numero de lados debe estar entre 5 y 12\nIngrese el dato de nuevo");
+            numlados = sc.nextInt();
+        }
+        if (numlados == 5) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.calculaDatosPentagono();
+            nlados1.imprimirDatosPentagono();
+
+        } else if (numlados == 6) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.calcularDatosHexagono();
+            nlados1.imprimirDatosHexagono();
+
+        } else if (numlados == 7) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.calcularDatosHeptagono();
+            nlados1.imprimirDatosHeptagono();
+
+        } else if (numlados == 8) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.calcularDatosOctagono();
+            nlados1.imprimirDatosOctagono();
+
+        } else if (numlados == 9) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.calcularDatosnonagono();
+            nlados1.imprimirDatosNonagono();
+
+        } else if (numlados == 10) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.calcularDatosdecagono();
+            nlados1.imprimirDatosDecagono();
+
+        } else if (numlados == 11) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.calcularDatosendecagono();
+            nlados1.imprimirDatosEndecagono();
+
+        } else if (numlados == 12) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.calcularDatosdodecagono();
+            nlados1.imprimirDatosDodecagono();
+        }
+    }
+
+    //FIGURAS EN 3D
+
+    public static void esferas(){
+        Scanner sc = new Scanner(System.in);
+        Figuras_2D esfera = new Figuras_2D();
+        System.out.println("Ingrese el radio de la esfera");
+        esfera.setRadio(sc.nextDouble());
+
+        esfera.calcularDatosEsfera();
+        esfera.imprimirDatosEsfera();
+    }
+
+    public static void cilindros() {
+        Scanner sc = new Scanner(System.in);
+        Figuras_2D cilindro = new Figuras_2D();
+        System.out.println("Ingrese el radio de la cilindro");
+        cilindro.setRadio(sc.nextDouble());
+        System.out.println("Ingrese la altura del cilindro");
+        cilindro.setAltura(sc.nextDouble());
+
+        cilindro.calcularDatosCilindro();
+        cilindro.imprimirDatosCilindro();
+    }
+
+    public static void cubos(){
+        Scanner sc = new Scanner(System.in);
+        Figuras_2D cubo = new Figuras_2D();
+        System.out.println("Ingrese el area de la cara de la cubo");
+        cubo.setArea(sc.nextDouble());
+
+        cubo.calcularDatosCubo();
+        cubo.imprimirDatosCubo();
+    }
+
     public static void Piramides () {
         Figuras_2D  p1 = new Figuras_2D();
         Scanner sc = new Scanner(System.in);
@@ -404,7 +413,5 @@ public class Main {
         prisma.calcularDatosPrisma();
         prisma.imprimirDatosPrisma();
     }
-
-
 
 }
