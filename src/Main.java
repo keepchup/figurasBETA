@@ -29,6 +29,8 @@ public class Main {
         c2.imprimirDatosRectangulo();
 
         Cuadrilateros c3 = new Cuadrilateros();
+
+        System.out.println("\n");
         c3.setLado1(5);
         c3.setLado2(3);
         c3.setLado3(6);
