@@ -105,9 +105,11 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Piramides");
+                    Piramides();
                     break;
                 case 4:
                     System.out.println("Prismas");
+                    Prisma();
                     break;
                 case 5:
                     System.out.println("Cilindro");
@@ -374,6 +376,33 @@ public class Main {
                     System.out.println("Ingrese un numero valido (1, 2 o 3).");
             }
         } while (op!=3);
+    }
+
+    public static void Piramides () {
+        Figuras_2D  p1 = new Figuras_2D();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ingrese el area de la piramide: ");
+        p1.setArea(sc.nextDouble());
+        System.out.println("Ingrese el altura de la piramide: ");
+        p1.setAltura(sc.nextDouble());
+
+        p1.calcularDatosPiramide();
+        p1.imprimirDatosPiramide();
+
+    }
+
+    public static void Prisma () {
+        Figuras_2D  prisma = new Figuras_2D();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ingrese el area del prisma: ");
+        prisma.setArea(sc.nextDouble());
+        System.out.println("Ingrese el altura del prisma: ");
+        prisma.setAltura(sc.nextDouble());
+
+        prisma.calcularDatosPrisma();
+        prisma.imprimirDatosPrisma();
     }
 
 
