@@ -64,12 +64,13 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Cuadrilateros");
+                    cuadrilateros();
                     break;
                 case 4:
                     System.out.println("Figuras de N lados");
                     break;
                 case 5:
-                    System.out.println("Regresando al menú principal...");
+                    System.out.println("Regresando al menú principal...\n");
                     return;
                 default:
                     System.out.println("Ingrese un número válido (1, 2, 3, 4 o 5).");
@@ -104,11 +105,47 @@ public class Main {
                     System.out.println("Prismas");
                     break;
                 case 5:
-                    System.out.println("Regresando al menú principal...");
+                    System.out.println("Regresando al menú principal...\n");
                     return;
                 default:
                     System.out.println("Ingrese un número válido (1, 2, 3, 4 o 5).");
             }
         } while (op != 5);
+    }
+
+    public static void cuadrilateros() {
+        Scanner sc = new Scanner(System.in);
+        Cuadrilateros c1 = new Cuadrilateros();
+        int op;
+        do {
+            System.out.println("Seleccione que quiere calcular\n");
+            System.out.println("\t1. Area\n\t2.Perimetro\n");
+            System.out.print("Ingrese el numero de la opcion: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("Debe ingresar un número entero.");
+                sc.next();
+            }
+            op = sc.nextInt();
+            switch (op){
+                case 1:
+                    System.out.println("\tArea");
+                    System.out.println("Ingrese la logitud de un lado del cuadrado");
+                    double lado = sc.nextDouble();
+                    c1.setBase(lado);
+                    c1.calcularDatosCuadrado();
+                    c1.imprimirdATOSCuadrado();
+                    break;
+                case 2:
+                    System.out.println("\tPerimetro");
+                    break;
+                case 3:
+                    System.out.println("Regresando al menú...\n");
+                    break;
+                default:
+                    System.out.println("Ingrese un numero valido (1, 2 o 3).");
+            }
+        } while (op!=3);
+
+
     }
 }
