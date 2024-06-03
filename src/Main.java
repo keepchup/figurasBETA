@@ -146,7 +146,7 @@ public class Main {
                     c1.setAltura(sc.nextDouble());
 
                     c1.calcularDatosRectangulo();
-                    c1.imprimirdATOSCuadrado();
+                    c1.imprimirDatosRectangulo();
                     break;
 
                 case 3:
@@ -159,26 +159,8 @@ public class Main {
                     c1.setLado3(sc.nextDouble());
                     System.out.println("Ingrese la longitud del lado 4: ");
                     c1.setLado4(sc.nextDouble());
-
-                    double angulo1;
-                    do {
-                        System.out.println("Ingrese la medida del primer angulo (De 60 a 90 grados): ");
-                        angulo1 = sc.nextDouble();
-                        if (angulo1 < 60 || angulo1 > 90) {
-                            System.out.println("El ángulo debe estar entre 60 y 90 grados. Inténtalo de nuevo.");
-                        }
-                    } while (angulo1 < 60 || angulo1 > 90);
-                    c1.setAngulo1(angulo1);
-
-                    double angulo2;
-                    do {
-                        System.out.println("Ingrese la medida del segundo angulo (De 60 a 90 grados): ");
-                        angulo2 = sc.nextDouble();
-                        if (angulo2 < 60 || angulo2 > 90) {
-                            System.out.println("El ángulo debe estar entre 60 y 90 grados. Inténtalo de nuevo.");
-                        }
-                    } while (angulo2 < 60 || angulo2 > 90);
-                    c1.setAngulo2(angulo2);
+                    System.out.println("Ingrese la longitud de la diagonal: ");
+                    c1.setDiagonal(sc.nextDouble());
 
                     c1.calcularDatosCuadrilateroIrregular();
                     c1.ImprimirDatosCuadrilateroIrregular();

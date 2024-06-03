@@ -4,7 +4,7 @@ import java.sql.SQLOutput;
 
 public class Cuadrilateros extends Dos_D{
 
-    double lado1, lado2, lado3, lado4;
+    double lado1, lado2, lado3, lado4, diagonal;
     double angulo1, angulo2;
 
 
@@ -43,6 +43,14 @@ public class Cuadrilateros extends Dos_D{
         this.lado4 = lado4;
     }
 
+    public double getDiagonal() {
+        return diagonal;
+    }
+
+    public void setDiagonal(double diagonal) {
+        this.diagonal = diagonal;
+    }
+
     public double getAngulo1() {
         return angulo1;
     }
@@ -67,6 +75,8 @@ public class Cuadrilateros extends Dos_D{
         return super.getArea();
     }
 
+
+
     public double calcularDatosCuadrado() {
         area = base*base;
         perimetro = base*4;
@@ -90,13 +100,17 @@ public class Cuadrilateros extends Dos_D{
         System.out.println("El perimetro del rectangulo es: " + getPerimetro());
     }
 
-    public void calcularDatosCuadrilateroIrregular () {
-        angulo1 = Math.toRadians(angulo1);
-        angulo2 = Math.toRadians(angulo2);
-
-        area = (0.5 * lado1 * lado2  * (Math.sin(angulo1)))+ (0.5 * lado3 * lado4 * (Math.sin(angulo2)));
-        perimetro = lado1 +  lado2 + lado3 + lado4;
-
+    public double calcularAreaTrianguloI(double a, double b, double c) {
+        double s = (a + b + c) / 2;
+        double areat = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        return areat;
+    }
+    public double calcularDatosCuadrilateroIrregular () {
+        perimetro = lado1+ lado2+ lado3+ lado4;
+        double area1 = calcularAreaTrianguloI(lado1, lado2, diagonal);
+        double area2 = calcularAreaTrianguloI(lado3, lado4, diagonal);
+        area = area1 + area2;
+        return area;
     }
 
     public void ImprimirDatosCuadrilateroIrregular() {
