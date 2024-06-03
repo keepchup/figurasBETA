@@ -14,23 +14,8 @@ public class Main {
         System.out.println("\n\tCALCULADORA DE FIGURAS\n");
         System.out.println("¡Hola, bienvenido a tu calculadora favorita!\n\nSelecciona una categoria\n");
         System.out.println("\t1. Figuras_2D\n\t2. Figuras_3D\n\t3. Salir\n");
-        System.out.print("Ingresa una opcion: ");
         int op = sc.nextInt();
         do {
-            try {
-                System.out.println("Ingrese el numero de la opcion: ");
-                op = sc.nextInt();
-                sc.nextLine();
-
-                if (op < 1 || op > 3) {
-                    System.out.println("Ingrese un número válido (1, 2 o 3).");
-                    continue;
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("Debe ingresar un número entero.");
-                sc.nextLine();
-                op = 0;
-            }
             switch (op){
                 case 1:
                     System.out.println("\nFiguras 2D\n");
@@ -55,20 +40,6 @@ public class Main {
         int op = sc.nextInt();
 
         do {
-            try {
-                System.out.println("Ingrese el numero de la opcion: ");
-                op = sc.nextInt();
-                sc.nextLine();
-
-                if (op < 1 || op > 5) {
-                    System.out.println("Ingrese un número válido (1, 2, 3, 4 o 5).");
-                    continue;
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("Debe ingresar un número entero.");
-                sc.nextLine();
-                op = 0;
-            }
             switch (op){
                 case 1:
                     System.out.println("Circunferencias");
@@ -84,7 +55,7 @@ public class Main {
                     break;
                 case 5:
                     System.out.println("Regresando");
-                    break;
+                    return;
             }
         } while (op!=5);
 
@@ -98,20 +69,6 @@ public class Main {
         int op = sc.nextInt();
 
         do {
-            try {
-                System.out.println("Ingrese el numero de la opcion: ");
-                op = sc.nextInt();
-                sc.nextLine();
-
-                if (op < 1 || op > 5) {
-                    System.out.println("Ingrese un número válido (1, 2, 3, 4 o 5).");
-                    continue;
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("Debe ingresar un número entero.");
-                sc.nextLine();
-                op = 0;
-            }
             switch (op){
                 case 1:
                     System.out.println("Esferas");
@@ -127,7 +84,7 @@ public class Main {
                     break;
                 case 5:
                     System.out.println("Regresando");
-                    break;
+                    return;
             }
         } while (op!=5);
     }
