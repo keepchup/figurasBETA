@@ -70,6 +70,7 @@ public class Main {
                     break;
                 case 4:
                     System.out.println("Figuras de N lados");
+                    Nlados();
                     break;
                 case 5:
                     System.out.println("Regresando al menú principal...\n");
@@ -113,6 +114,67 @@ public class Main {
                     System.out.println("Ingrese un número válido (1, 2, 3, 4 o 5).");
             }
         } while (op != 5);
+    }
+
+    public static void Nlados(){
+        Scanner sc = new Scanner(System.in);
+        Nlados nlados1 = new Nlados();
+        int numlados;
+
+        System.out.println("\nIngrese el numero de lados de su figura\n");
+        numlados = sc.nextInt();
+        while (!sc.hasNextInt() || numlados <5 || numlados > 12) {
+            System.out.println("Debe ingresar un número entero o que este entre 5 y 12");
+            sc.next();
+        }
+        if (numlados == 5) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.calculaDatosPentagono();
+            nlados1.imprimirDatosPentagono();
+
+        } else if (numlados == 6) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.calcularDatosHexagono();
+            nlados1.imprimirDatosHexagono();
+
+        } else if (numlados == 7) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.imprimirDatosHeptagono();
+            nlados1.imprimirDatosHeptagono();
+
+        } else if (numlados == 8) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.imprimirDatosOctagono();
+            nlados1.imprimirDatosOctagono();
+
+        } else if (numlados == 9) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.imprimirDatosNonagono();
+            nlados1.imprimirDatosNonagono();
+
+        } else if (numlados == 10) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.imprimirDatosDecagono();
+            nlados1.imprimirDatosDecagono();
+
+        } else if (numlados == 11) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.calcularDatosendecagono();
+            nlados1.calcularDatosendecagono();
+
+        } else if (numlados == 12) {
+            System.out.println("Ingrese la medida del lado\n");
+            nlados1.setTamlado(sc.nextDouble());
+            nlados1.imprimirDatosDodecagono();
+            nlados1.imprimirDatosDodecagono();
+        }
     }
 
     public static void Circunferencias () {
@@ -275,7 +337,6 @@ public class Main {
             }
         } while (op!=3);
     }
-
 
 
 }
