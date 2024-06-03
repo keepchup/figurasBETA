@@ -3,6 +3,7 @@ import FIGURAS.Cuadrilateros;
 import FIGURAS.Circunferencias;
 import FIGURAS.Triangulos;
 import FIGURAS.Nlados;
+import FIGURAS.Figuras_2D;
 
 public class Main {
     public static void main(String[] args) {
@@ -85,5 +86,35 @@ public class Main {
         dodecagono1.setTamlado(3);
         dodecagono1.calcularDatosdodecagono();
         dodecagono1.imprimirDatosDodecagono();
+
+        //ESFERA
+        System.out.println("\n");
+        Figuras_2D esfera1 = new Figuras_2D();
+        esfera1.setRadio(3.1);
+        esfera1.calcularDatosEsfera();
+        esfera1.imprimirDatosEsfera();
+
+        //CILINDRO
+        System.out.println("\n");
+        Figuras_2D cilindro1 = new Figuras_2D();
+        cilindro1.setRadio(4.1);
+        cilindro1.setAltura(5);
+        cilindro1.calcularDatosCilindro();
+        cilindro1.imprimirDatosCilindro();
+
+        //CUBO
+        System.out.println("\n");
+        Figuras_2D cubo1 = new Figuras_2D();
+        cubo1.setArea(5);
+        cubo1.calcularDatosCubo();
+        cubo1.imprimirDatosCubo();
+
+        //PIRAMIDE
+        System.out.println("\n");
+        Figuras_2D piramide1 = new Figuras_2D();
+        piramide1.setArea(23);
+        piramide1.setAltura(5);
+        piramide1.calcularDatosPiramide();
+        piramide1.imprimirDatosPiramide();
     }
 }
