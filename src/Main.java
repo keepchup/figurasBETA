@@ -101,6 +101,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Cubos");
+                    cubos();
                     break;
                 case 3:
                     System.out.println("Piramides");
@@ -110,6 +111,7 @@ public class Main {
                     break;
                 case 5:
                     System.out.println("Cilindro");
+                    cilindros();
                     break;
                 case 6:
                     System.out.println("Regresando al menú principal...\n");
@@ -118,6 +120,38 @@ public class Main {
                     System.out.println("Ingrese un número válido (1, 2, 3, 4, 5 o 6).");
             }
         } while (op != 5);
+    }
+
+    public static void esferas(){
+        Scanner sc = new Scanner(System.in);
+        Figuras_2D esfera = new Figuras_2D();
+        System.out.println("Ingrese el radio de la esfera");
+        esfera.setRadio(sc.nextDouble());
+
+        esfera.calcularDatosEsfera();
+        esfera.imprimirDatosEsfera();
+    }
+
+    public static void cilindros() {
+        Scanner sc = new Scanner(System.in);
+        Figuras_2D cilindro = new Figuras_2D();
+        System.out.println("Ingrese el radio de la cilindro");
+        cilindro.setRadio(sc.nextDouble());
+        System.out.println("Ingrese la altura del cilindro");
+        cilindro.setAltura(sc.nextDouble());
+
+        cilindro.calcularDatosCilindro();
+        cilindro.imprimirDatosCilindro();
+    }
+
+    public static void cubos(){
+        Scanner sc = new Scanner(System.in);
+        Figuras_2D cubo = new Figuras_2D();
+        System.out.println("Ingrese el area de la cara de la cubo");
+        cubo.setArea(sc.nextDouble());
+
+        cubo.calcularDatosCubo();
+        cubo.imprimirDatosCubo();
     }
 
     public static void Nlados(){
@@ -342,8 +376,6 @@ public class Main {
         } while (op!=3);
     }
 
-    public static void esferas(){
-        System.out.println("Ingrese el radio de la esfera");
-    }
+
 
 }

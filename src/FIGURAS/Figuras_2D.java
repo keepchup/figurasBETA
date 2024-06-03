@@ -57,11 +57,6 @@ public class Figuras_2D extends Figuras{
         this.area = area;
     }
 
-    public double calcularVolumen() {
-        System.out.println("Calculando volumen de Figuras 3D");
-        return volumen;
-    }
-
     public double calcularDatosEsfera(){
         volumen= ((4*Math.PI*Math.pow(radio,3))/3);
         return volumen;
