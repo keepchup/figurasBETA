@@ -164,7 +164,7 @@ public class Main {
         } else if (numlados == 10) {
             System.out.println("Ingrese la medida del lado\n");
             nlados1.setTamlado(sc.nextDouble());
-            nlados1.calcularDatosdodecagono();
+            nlados1.calcularDatosdecagono();
             nlados1.imprimirDatosDecagono();
 
         } else if (numlados == 11) {
