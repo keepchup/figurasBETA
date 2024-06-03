@@ -38,7 +38,7 @@ public class Nlados extends Otras_Figuras{
 
     public void imprimirDatosPentagono(){
         System.out.println("Apotema: "+ getApotema());
-        System.out.println("Tamlado: "+ getTamlado());
+        System.out.println("Diametro del lado: "+ getTamlado());
         System.out.println("El area del pentagono es: " + getArea());
         System.out.println("El perimetro del pentagono es: " + getPerimetro());
     }
@@ -51,7 +51,7 @@ public class Nlados extends Otras_Figuras{
 
     public void imprimirDatosHexagono(){
         System.out.println("Apotema: "+ getApotema());
-        System.out.println("Tamlado: "+ getTamlado());
+        System.out.println("Diametro del lado: "+ getTamlado());
         System.out.println("El area del hexagono es: " + getArea());
         System.out.println("El perimetro del hexagono es: " + getPerimetro());
     }
@@ -63,7 +63,7 @@ public class Nlados extends Otras_Figuras{
     }
     public void imprimirDatosHeptagono(){
         System.out.println("Apotema: "+ getApotema());
-        System.out.println("Tamlado: "+ getTamlado());
+        System.out.println("Diametro del lado: "+ getTamlado());
         System.out.println("El area del heptagono es: " + getArea());
         System.out.println("El perimetro del heptagono es: " + getPerimetro());
     }
@@ -76,7 +76,7 @@ public class Nlados extends Otras_Figuras{
     }
     public void imprimirDatosOctagono(){
         System.out.println("Apotema: "+ getApotema());
-        System.out.println("Tamlado: "+ getTamlado());
+        System.out.println("Diametro del lado: "+ getTamlado());
         System.out.println("El area del octagono es: " + getArea());
         System.out.println("El perimetro del octagono es: " + getPerimetro());
     }
@@ -88,7 +88,7 @@ public class Nlados extends Otras_Figuras{
     }
     public void imprimirDatosNonagono() {
         System.out.println("Apotema: " + getApotema());
-        System.out.println("Tamlado: " + getTamlado());
+        System.out.println("Diametro del lado: " + getTamlado());
         System.out.println("El area del nonagono es: " + getArea());
         System.out.println("El perimetro del nonagono es: " + getPerimetro());
     }
@@ -101,7 +101,7 @@ public class Nlados extends Otras_Figuras{
 
     public void imprimirDatosDecagono() {
         System.out.println("Apotema: " + getApotema());
-        System.out.println("Tamlado: " + getTamlado());
+        System.out.println("Diametro del lado: " + getTamlado());
         System.out.println("El area del decagono es: " + getArea());
         System.out.println("El perimetro del decagono es: " + getPerimetro());
     }
@@ -113,7 +113,7 @@ public class Nlados extends Otras_Figuras{
     }
     public void imprimirDatosEndecagono(){
         System.out.println("Apotema: "+ getApotema());
-        System.out.println("Tamlado: "+ getTamlado());
+        System.out.println("Diametro del lado: "+ getTamlado());
         System.out.println("El area del endecagono es: " + getArea());
         System.out.println("El perimetro del endecagono es: " + getPerimetro());
     }
@@ -126,7 +126,7 @@ public class Nlados extends Otras_Figuras{
     }
     public void imprimirDatosDodecagono(){
         System.out.println("Apotema: "+ getApotema());
-        System.out.println("Tamlado: "+ getTamlado());
+        System.out.println("Diametro del lado: "+ getTamlado());
         System.out.println("El area del dodecagono es: " + getArea());
         System.out.println("El perimetro del dodecagono es: " + getPerimetro());
     }

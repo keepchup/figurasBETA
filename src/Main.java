@@ -127,7 +127,6 @@ public class Main {
             System.out.println("El numero de lados debe estar entre 5 y 12\nIngrese el dato de nuevo");
             numlados = sc.nextInt();
         }
-
         if (numlados == 5) {
             System.out.println("Ingrese la medida del lado\n");
             nlados1.setTamlado(sc.nextDouble());
@@ -176,7 +175,6 @@ public class Main {
             nlados1.imprimirDatosDodecagono();
             nlados1.imprimirDatosDodecagono();
         }
-
     }
 
     public static void Circunferencias () {
