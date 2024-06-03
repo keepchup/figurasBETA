@@ -28,6 +28,16 @@ public class Main {
         c2.calcularDatosRectangulo();
         c2.imprimirDatosRectangulo();
 
+        Cuadrilateros c3 = new Cuadrilateros();
+        c3.setLado1(5);
+        c3.setLado2(3);
+        c3.setLado3(6);
+        c3.setLado4(9);
+        c3.setAngulo1(90);
+        c3.setAngulo2(90);
+
+        c3.calcularDatisRectaguloIrregular();
+        c3.ImprimirDatosRectanguloIrregular();
 
         //CIRCUNFERENCIAS
         System.out.println("\n");
