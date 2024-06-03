@@ -158,7 +158,10 @@ public class Main {
                     c1.setLado3(sc.nextDouble());
                     System.out.println("Ingrese la longitud del lado 4: ");
                     c1.setLado4(sc.nextDouble());
-                    System.out.println("Ingrese la medida del primer angulo: ");
+                    System.out.println("Ingrese la medida del primer angulo (De 60 a 90 grados): ");
+                    c1.setAngulo1(sc.nextDouble());
+                    System.out.println("Ingrese la medida del segundo angulo (De 60 a 90 grados): ");
+                    c1.setAngulo2(sc.nextDouble());
 
                     c1.calcularDatosRectangulo();
                     c1.imprimirdATOSCuadrado();
