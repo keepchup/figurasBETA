@@ -8,15 +8,23 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("\n\tCALCULADORA DE FIGURAS\n");
-        System.out.println("¡Hola, bienvenido a tu calculadora favorita!\n\nSelecciona una categoria\n");
-        System.out.println("\t1. Figuras_2D\n\t2. Figuras_3D\n\t3. Salir\n");
-        int op = sc.nextInt();
+        int op;
         do {
-            switch (op){
+            System.out.println("\n\tCALCULADORA DE FIGURAS\n");
+            System.out.println("¡Hola, bienvenido a tu calculadora favorita!\n\nSelecciona una categoria\n");
+            System.out.println("\t1. Figuras 2D\n\t2. Figuras 3D\n\t3. Salir\n");
+            System.out.print("Ingresa una opcion: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("Debe ingresar un número entero.");
+                sc.next();
+            }
+            op = sc.nextInt();
+
+            switch (op) {
                 case 1:
                     System.out.println("\nFiguras 2D\n");
                     figuras2D();
@@ -28,19 +36,26 @@ public class Main {
                 case 3:
                     System.out.println("¡Gracias por preferirnos!");
                     break;
+                default:
+                    System.out.println("Ingrese un número válido (1, 2 o 3).");
             }
-        } while (op!=3);
+        } while (op != 3);
     }
 
-    public static void figuras2D(){
+    public static void figuras2D() {
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("\nSeleccione la figura de la cual quieras calcular\n");
-        System.out.println("\t1. Circunferencias\n\t2. Triangulos\n\t3. Cuadrilateros\n\t4. Nlados\n\t5. Regresar\n");
-        int op = sc.nextInt();
-
+        int op;
         do {
-            switch (op){
+            System.out.println("\nSeleccione la figura de la cual quieras calcular\n");
+            System.out.println("\t1. Circunferencias\n\t2. Triangulos\n\t3. Cuadrilateros\n\t4. Nlados\n\t5. Regresar\n");
+            System.out.print("Ingrese el numero de la opcion: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("Debe ingresar un número entero.");
+                sc.next();
+            }
+            op = sc.nextInt();
+
+            switch (op) {
                 case 1:
                     System.out.println("Circunferencias");
                     break;
@@ -54,22 +69,28 @@ public class Main {
                     System.out.println("Figuras de N lados");
                     break;
                 case 5:
-                    System.out.println("Regresando");
+                    System.out.println("Regresando al menú principal...");
                     return;
+                default:
+                    System.out.println("Ingrese un número válido (1, 2, 3, 4 o 5).");
             }
-        } while (op!=5);
-
+        } while (op != 5);
     }
 
-    public static void figuras3D(){
+    public static void figuras3D() {
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("\nSeleccione la figura de la cual quieras calcular\n");
-        System.out.println("\t1. Esferas\n\t2. Cubos\n\t3. Piramides\n\t4. Prismas\n\t5. Regresar\n");
-        int op = sc.nextInt();
-
+        int op;
         do {
-            switch (op){
+            System.out.println("\nSeleccione la figura de la cual quieras calcular\n");
+            System.out.println("\t1. Esferas\n\t2. Cubos\n\t3. Piramides\n\t4. Prismas\n\t5. Regresar\n");
+            System.out.print("Ingrese el numero de la opcion: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("Debe ingresar un número entero.");
+                sc.next();
+            }
+            op = sc.nextInt();
+
+            switch (op) {
                 case 1:
                     System.out.println("Esferas");
                     break;
@@ -83,9 +104,11 @@ public class Main {
                     System.out.println("Prismas");
                     break;
                 case 5:
-                    System.out.println("Regresando");
+                    System.out.println("Regresando al menú principal...");
                     return;
+                default:
+                    System.out.println("Ingrese un número válido (1, 2, 3, 4 o 5).");
             }
-        } while (op!=5);
+        } while (op != 5);
     }
 }
