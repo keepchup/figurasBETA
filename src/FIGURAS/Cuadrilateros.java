@@ -90,7 +90,7 @@ public class Cuadrilateros extends Dos_D{
         System.out.println("El perimetro del rectangulo es: " + getPerimetro());
     }
 
-    public void calcularDatisRectaguloIrregular () {
+    public void calcularDatosCuadrilateroIrregular () {
         angulo1 = Math.toRadians(angulo1);
         angulo2 = Math.toRadians(angulo2);
 
@@ -99,8 +99,8 @@ public class Cuadrilateros extends Dos_D{
 
     }
 
-    public void ImprimirDatosRectanguloIrregular() {
-        System.out.println("El area del rectangulo irregular es: " + area);
-        System.out.println("El perimetro del rectangulo irregular es: " + perimetro);
+    public void ImprimirDatosCuadrilateroIrregular() {
+        System.out.println("El area del cuadrilatero irregular es: " + area);
+        System.out.println("El perimetro del cuadrilatero irregular es: " + perimetro);
     }
 }
