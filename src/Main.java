@@ -115,6 +115,52 @@ public class Main {
         } while (op != 5);
     }
 
+    public static void Circunferencias () {
+        Scanner sc = new Scanner(System.in);
+        Circunferencias c1 = new Circunferencias();
+        int op;
+        double radio, radiosecundario;
+
+        do {
+            System.out.println("Seleccione la figura a calcular\n");
+            System.out.println("\t1. Circulo \n\t2. Elipse\n\t3. Regresar\n");
+            System.out.print("Ingrese el numero de la opcion: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("Debe ingresar un número entero.");
+                sc.next();
+            }
+            op = sc.nextInt();
+
+            switch (op) {
+                case 1:
+                    System.out.println("\n\tCirculo");
+                    System.out.printf ("Ingrese el radio del circulo: ");
+                    c1.setRadio(sc.nextDouble());
+
+                    c1.calcularAreaCirculo();
+                    c1.imprimirDatosCirculo();
+                    break;
+
+                case 2:
+                    System.out.println("\n\tElipse");
+                    System.out.println ("Ingrese el radio del elipse: ");
+                    c1.setRadio(sc.nextDouble());
+                    System.out.println ("Ingrese el radio Secundario del elipse: ");
+                    c1.setRadioSecundario(sc.nextDouble());
+
+                    c1.calcularAreaElipse();
+                    c1.imprimirDatosElipse();
+                    break;
+                case 3:
+                    System.out.println("Regresando al menu principal");
+                    break;
+                default:
+                    System.out.println("Ingrese un numero valido (1, 2 o 3).");
+
+            }
+        } while (op != 3);
+    }
+
     public static void triangulos(){
         Scanner sc = new Scanner(System.in);
         Triangulos t1 = new Triangulos();
@@ -230,51 +276,6 @@ public class Main {
         } while (op!=3);
     }
 
-    public static void Circunferencias () {
-        Scanner sc = new Scanner(System.in);
-        Circunferencias c1 = new Circunferencias();
-        int op;
-        double radio, radiosecundario;
-
-        do {
-            System.out.println("Seleccione la figura a calcular\n");
-            System.out.println("\t1. Circulo \n\t2. Elipse\n\t3. Regresar\n");
-            System.out.print("Ingrese el numero de la opcion: ");
-            while (!sc.hasNextInt()) {
-                System.out.println("Debe ingresar un número entero.");
-                sc.next();
-            }
-            op = sc.nextInt();
-
-            switch (op) {
-                case 1:
-                    System.out.println("\n\tCirculo");
-                    System.out.printf ("Ingrese el radio del circulo: ");
-                    c1.setRadio(sc.nextDouble());
-
-                    c1.calcularAreaCirculo();
-                    c1.imprimirDatosCirculo();
-                    break;
-
-                case 2:
-                    System.out.println("\n\tElipse");
-                    System.out.println ("Ingrese el radio del elipse: ");
-                    c1.setRadio(sc.nextDouble());
-                    System.out.println ("Ingrese el radio Secundario del elipse: ");
-                    c1.setRadioSecundario(sc.nextDouble());
-
-                    c1.calcularAreaElipse();
-                    c1.imprimirDatosElipse();
-                    break;
-                case 3:
-                    System.out.println("Regresando al menu principal");
-                    break;
-                default:
-                    System.out.println("Ingrese un numero valido (1, 2 o 3).");
-
-            }
-        } while (op != 3);
-    }
 
 
 }
