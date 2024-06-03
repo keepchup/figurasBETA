@@ -58,6 +58,15 @@ public class Main {
         t2.calcularDatosTrianguloEquilatero();
         t2.imprimirDatosTrianguloEquilatero();
 
+        System.out.println("\n");
+        Triangulos t3 = new Triangulos();
+        t3.setLados(3);
+        t3.setLado1(4);
+        t3.setLado2(3);
+        t3.setLado3(5);
+        t3.calcularDatosTrianguloEscaleno();
+        t3.imprimirDatosTrianguloEscaleno();
+
 
         //HEPTAGONO
         System.out.println("\n");
