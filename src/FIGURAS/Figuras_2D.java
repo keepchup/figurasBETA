@@ -93,4 +93,12 @@ public class Figuras_2D extends Figuras{
     public void imprimirDatosPiramide(){
         System.out.println("El volumen de la piramide es: " + getVolumen());
     }
+
+    public double calcularDatosPrisma(){
+        volumen=(area*altura);
+        return volumen;
+    }
+    public void imprimirDatosPrisma(){
+        System.out.println("El volumen de la prisma es: " + getVolumen());
+    }
 }

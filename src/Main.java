@@ -116,5 +116,13 @@ public class Main {
         piramide1.setAltura(5);
         piramide1.calcularDatosPiramide();
         piramide1.imprimirDatosPiramide();
+
+        //PRISMA
+        System.out.println("\n");
+        Figuras_2D prisma1 = new Figuras_2D();
+        prisma1.setArea(14);
+        prisma1.setAltura(7);
+        prisma1.calcularDatosPrisma();
+        prisma1.imprimirDatosPrisma();
     }
 }
