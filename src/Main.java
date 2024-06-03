@@ -97,6 +97,7 @@ public class Main {
             switch (op) {
                 case 1:
                     System.out.println("Esferas");
+                    esferas();
                     break;
                 case 2:
                     System.out.println("Cubos");
@@ -108,10 +109,13 @@ public class Main {
                     System.out.println("Prismas");
                     break;
                 case 5:
+                    System.out.println("Cilindro");
+                    break;
+                case 6:
                     System.out.println("Regresando al menú principal...\n");
                     return;
                 default:
-                    System.out.println("Ingrese un número válido (1, 2, 3, 4 o 5).");
+                    System.out.println("Ingrese un número válido (1, 2, 3, 4, 5 o 6).");
             }
         } while (op != 5);
     }
@@ -142,37 +146,37 @@ public class Main {
         } else if (numlados == 7) {
             System.out.println("Ingrese la medida del lado\n");
             nlados1.setTamlado(sc.nextDouble());
-            nlados1.imprimirDatosHeptagono();
+            nlados1.calcularDatosHeptagono();
             nlados1.imprimirDatosHeptagono();
 
         } else if (numlados == 8) {
             System.out.println("Ingrese la medida del lado\n");
             nlados1.setTamlado(sc.nextDouble());
-            nlados1.imprimirDatosOctagono();
+            nlados1.calcularDatosOctagono();
             nlados1.imprimirDatosOctagono();
 
         } else if (numlados == 9) {
             System.out.println("Ingrese la medida del lado\n");
             nlados1.setTamlado(sc.nextDouble());
-            nlados1.imprimirDatosNonagono();
+            nlados1.calcularDatosnonagono();
             nlados1.imprimirDatosNonagono();
 
         } else if (numlados == 10) {
             System.out.println("Ingrese la medida del lado\n");
             nlados1.setTamlado(sc.nextDouble());
-            nlados1.imprimirDatosDecagono();
+            nlados1.calcularDatosdodecagono();
             nlados1.imprimirDatosDecagono();
 
         } else if (numlados == 11) {
             System.out.println("Ingrese la medida del lado\n");
             nlados1.setTamlado(sc.nextDouble());
             nlados1.calcularDatosendecagono();
-            nlados1.calcularDatosendecagono();
+            nlados1.imprimirDatosEndecagono();
 
         } else if (numlados == 12) {
             System.out.println("Ingrese la medida del lado\n");
             nlados1.setTamlado(sc.nextDouble());
-            nlados1.imprimirDatosDodecagono();
+            nlados1.calcularDatosdodecagono();
             nlados1.imprimirDatosDodecagono();
         }
     }
@@ -338,5 +342,8 @@ public class Main {
         } while (op!=3);
     }
 
+    public static void esferas(){
+        System.out.println("Ingrese el radio de la esfera");
+    }
 
 }
