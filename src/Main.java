@@ -62,6 +62,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Triangulos");
+                    triangulos();
                     break;
                 case 3:
                     System.out.println("Cuadrilateros");
@@ -110,6 +111,61 @@ public class Main {
                     return;
                 default:
                     System.out.println("Ingrese un número válido (1, 2, 3, 4 o 5).");
+            }
+        } while (op != 5);
+    }
+
+    public static void triangulos(){
+        Scanner sc = new Scanner(System.in);
+        Triangulos t1 = new Triangulos();
+        int op;
+        do {
+            System.out.println("\nSeleccione el tipo de triangulo a calcular\n");
+            System.out.println("\t1. Equilatero\n\t2. Isoceles\n\t3. Escaleno\n\t4. Regresar\n");
+            System.out.print("Ingrese el numero de la opcion: ");
+            while (!sc.hasNextInt()) {
+                System.out.println("Debe ingresar un número entero.");
+                sc.next();
+            }
+            op = sc.nextInt();
+
+            switch (op) {
+                case 1:
+                    System.out.println("\n\tTriangulo Equilatero");
+                    System.out.println("Ingrese la medida de la base del triangulo");
+                    t1.setBase(sc.nextDouble());
+
+                    t1.calcularDatosTrianguloEquilatero();
+                    t1.imprimirDatosTrianguloEquilatero();
+
+                    break;
+                case 2:
+                    System.out.println("\n\tTriangulo Isoceles");
+                    System.out.println("Ingrese la medida de la base del triangulo");
+                    t1.setBase(sc.nextDouble());
+                    System.out.println("Ingrese la medida de la altura del triangulo");
+                    t1.setAltura(sc.nextDouble());
+
+                    t1.calcularDatosTriangulosIsoceles();
+                    t1.imprimirDatosTrianguloIsoceles();
+                    break;
+                case 3:
+                    System.out.println("\n\tTriangulo Escaleno");
+                    System.out.println("Ingrese la medida del lado 1 del triangulo");
+                    t1.setLado1(sc.nextDouble());
+                    System.out.println("Ingrese la medida del lado 2 del triangulo");
+                    t1.setLado2(sc.nextDouble());
+                    System.out.println("Ingrese la medida del lado 3 del triangulo");
+                    t1.setLado3(sc.nextDouble());
+
+                    t1.calcularDatosTrianguloEscaleno();
+                    t1.imprimirDatosTrianguloEscaleno();
+                    break;
+                case 5:
+                    System.out.println("Regresando al menú principal...\n");
+                    return;
+                default:
+                    System.out.println("Ingrese un número válido (1, 2, 3 o 4).");
             }
         } while (op != 5);
     }
@@ -219,4 +275,6 @@ public class Main {
             }
         } while (op != 3);
     }
+
+
 }
