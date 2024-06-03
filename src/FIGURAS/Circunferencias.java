@@ -2,12 +2,14 @@ package FIGURAS;
 
 public class Circunferencias extends Otras_Figuras{
     double radio;
+    double radioSecundario;
 
     public Circunferencias() {
     }
 
     public Circunferencias(double radio) {
         this.radio = radio;
+        this.radioSecundario = radioSecundario;
     }
 
     public double getRadio() {
@@ -18,6 +20,14 @@ public class Circunferencias extends Otras_Figuras{
         this.radio = radio;
     }
 
+    public double getRadioSecundario() {
+        return radioSecundario;
+    }
+
+    public void setRadioSecundario(double radioSecundario) {
+        this.radioSecundario = radioSecundario;
+    }
+
     public double calcularAreaCiruclo() {
         area= Math.PI * radio * radio;
         perimetro = 2 * Math.PI * radio;
@@ -25,7 +35,17 @@ public class Circunferencias extends Otras_Figuras{
     }
 
     public void imprimirDatosCirculo(){
-        System.out.println("Circulo: " + getArea());
-        System.out.println("Perimetro: " + getPerimetro());
+        System.out.println("El area del Circulo es: " + getArea());
+        System.out.println("El perimetro del circulo es: " + getPerimetro());
+    }
+
+    public double calcularAreaElipse(){
+        area = Math.PI * radio * radioSecundario;
+        perimetro = 2 * Math.PI * (Math.sqrt((Math.pow(radio, 2)+Math.pow(radioSecundario, 2))/2));
+        return area;
+    }
+    public void imprimirDatosElipse(){
+        System.out.println("El area de la elipse: " + getArea());
+        System.out.println("El perimetro de la elipse: " + getPerimetro());
     }
 }

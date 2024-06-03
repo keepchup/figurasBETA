@@ -37,6 +37,14 @@ public class Main {
         ciculo1.calcularAreaCiruclo();
         ciculo1.imprimirDatosCirculo();
 
+        System.out.println("\n");
+
+        Circunferencias elipse1 = new Circunferencias();
+        elipse1.setRadio(3);
+        elipse1.setRadioSecundario(5);
+        elipse1.calcularAreaElipse();
+        elipse1.imprimirDatosElipse();
+
 
         //TRIANGULOS
         System.out.println("\n");
