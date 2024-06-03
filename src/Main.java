@@ -123,10 +123,11 @@ public class Main {
 
         System.out.println("\nIngrese el numero de lados de su figura\n");
         numlados = sc.nextInt();
-        while (!sc.hasNextInt() || numlados <5 || numlados > 12) {
-            System.out.println("Debe ingresar un número entero o que este entre 5 y 12");
-            sc.next();
+        while (numlados < 5 || numlados > 12){
+            System.out.println("El numero de lados debe estar entre 5 y 12\nIngrese el dato de nuevo");
+            numlados = sc.nextInt();
         }
+
         if (numlados == 5) {
             System.out.println("Ingrese la medida del lado\n");
             nlados1.setTamlado(sc.nextDouble());
@@ -175,6 +176,7 @@ public class Main {
             nlados1.imprimirDatosDodecagono();
             nlados1.imprimirDatosDodecagono();
         }
+
     }
 
     public static void Circunferencias () {
